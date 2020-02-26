@@ -1,10 +1,10 @@
 from Tkinter import *
-def Draw(pixels,n,size,length,width_new):
+
+def Draw(pixels,n,size,length,width_new,x,y):
 
     t = 0
     import time
     count = 0
-    total_time = length*0.000658853368294
     time.sleep(0.1)
     import turtle
     wn = turtle.Screen()
@@ -12,7 +12,7 @@ def Draw(pixels,n,size,length,width_new):
     myPen.up()
     myPen.tracer(0)
     myPen.speed(0)
-    myPen.goto(0, 0)
+    myPen.goto(x, y)
     boxSize = size
     myPen.penup()
 
@@ -20,8 +20,6 @@ def Draw(pixels,n,size,length,width_new):
     height = 900
     wn.screensize(width_new+1000, height)
     wn.setup(width=1.0, height=1.0)
-    print width_new
-
 
     def progressBar(value, endvalue, bar_length=20):
 
@@ -48,8 +46,6 @@ def Draw(pixels,n,size,length,width_new):
         myPen.forward(intDim)
         myPen.end_fill()
         myPen.setheading(0)
-
-
 
     for i in range(0, len(pixels)):
         for j in range(0, len(pixels[i])):

@@ -20,4 +20,4 @@ final = [merged[i * n:(i + 1) * n] for i in range((len(merged) + n - 1) // n)]
 pixels = final
 
 
-Draw.Draw(pixels,0,10)
+Draw.Draw(pixels,0,10,1000,1000,0,0)

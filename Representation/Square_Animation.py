@@ -1,9 +1,12 @@
 from Generation import Conway_Reader
 import time
 import Draw
+import itertools
 
 conway = Conway_Reader.conway_array
 
+box_size = 5
+length =  32
 def getT(n):
 
     t = n
@@ -29,7 +32,13 @@ def getT(n):
 
     return t2
 
+width = box_size * len(conway[length-2])
+merged = list(itertools.chain(*conway))
+n = 10000000000
+final = [merged[i * n:(i + 1) * n] for i in range((len(merged) + n - 1) // n)]
+length = len(final[i])
+
 for i in range(1,25):
     start_time = time.clock()
     array = getT(i)
-    Draw.Draw(array,1,5)
+    Draw.Draw(array,1,box_size,length,width,0,0)

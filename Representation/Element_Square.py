@@ -4,7 +4,7 @@ import itertools
 
 def getElements():
 
-    f2 = open("/Users/emmetcarey/PycharmProjects/Conway/Text/Elements.txt", "r")
+    f2 = open("/Users/emmetcarey/Documents/GitHub/Final-Year-Project/Text/Elements.txt", "r")
 
     elements = f2.read().split("\n")
 
@@ -43,6 +43,6 @@ numbers = getElements()
 
 for i in range(0, 20):
     array = getT(i)
-    Draw.Draw(array,1,5)
+    Draw.Draw(array,1,5,1000,1000)
 
 

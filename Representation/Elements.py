@@ -2,8 +2,7 @@ from Generation import Conway_Reader
 import Draw
 
 def getElements():
-
-    f2 = open("/Users/emmetcarey/PycharmProjects/Conway/Text/Elements.txt", "r")
+    f2 = open("/Users/emmetcarey/Documents/GitHub/Final-Year-Project/Text/Elements.txt", "r")
 
     elements = f2.read().split("\n")
 
@@ -37,8 +36,8 @@ def getT(element_number):
 conway_array = Conway_Reader.conway_array
 numbers = getElements()
 
-for i in range(0, 20):
+for i in range(0,20):
     array = getT(i)
-    Draw.Draw(array,1,5)
+    Draw.Draw(array,1,2,1000,1000,-600,300)
 
 

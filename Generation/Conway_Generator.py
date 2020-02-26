@@ -66,8 +66,10 @@ def ConwayGeneration(a):
 
     iteration = []
 
-    File_object1 = open("/Users/emmetcarey/Documents/GitHub/FYP/Text/Binary_Sequence.txt", "a")
-    File_object2 = open("/Users/emmetcarey/Documents/GitHub/FYP/Text/Sequence.txt", "a")
+    File_object1 = open("/Users/emmetcarey/Documents/GitHub/Final-Year-Project/Text/Binary_Sequence.txt", "a")
+    File_object2 = open("/Users/emmetcarey/Documents/GitHub/Final-Year-Project/Text/Sequence.txt", "a")
+
+
     for i in range(1,a):
         merged = list(itertools.chain(countnndSay(i)))
         File_object2.write(countnndSay(i)+ "\n")

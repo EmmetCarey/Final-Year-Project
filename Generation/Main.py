@@ -1,5 +1,5 @@
 from Generation import Conway_Generator
 
-Conway_Generator.ConwayGeneration(40)
+Conway_Generator.ConwayGeneration(45)
 
 
