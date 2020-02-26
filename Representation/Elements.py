@@ -24,7 +24,7 @@ def getT(element_number):
         d = a.replace(b,"4" * int(len(b)),a.find(b) + 1)
         test.append(d)
 
-    for N in range(1,25):
+    for N in range(1,20):
 
      input = [test[N]]
      output = list(map(int, str(input[0])))

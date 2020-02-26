@@ -21,8 +21,6 @@ merged = list(itertools.chain(*pixels))
 n = 10000000000
 final = [merged[i * n:(i + 1) * n] for i in range((len(merged) + n - 1) // n)]
 length = len(final[i])
-
-
 start_time = time.time()
-Draw.Draw(pixels,1,box_size,length,width,0,0)
-print("--- %s seconds ---" % (time.time() - start_time))
+
+Draw.Draw(pixels,0,box_size,length,width,0,0)

@@ -30,7 +30,7 @@ for i in range(0, 20):
         conway_replace.append(list(map(int, str(d))))
 
 
-    Draw.Draw(conway_replace, 1, 5)
+    Draw.Draw(conway_replace, 1, 5,1000,1000,0,0)
 
 
 

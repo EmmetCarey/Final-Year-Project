@@ -21,7 +21,7 @@ def Draw(pixels,n,size,length,width_new,x,y):
     wn.screensize(width_new+1000, height)
     wn.setup(width=1.0, height=1.0)
 
-    def progressBar(value, endvalue, bar_length=20):
+    def progressBar(value, endvalue, bar_length=50):
 
         percent = float(value) / endvalue
         arrow = '-' * int(round(percent * bar_length) - 1) + '>'
@@ -81,7 +81,7 @@ def Draw(pixels,n,size,length,width_new,x,y):
     if n == 0:
         ts = turtle.getscreen()
         #ts.getcanvas().postscript(file="duck.eps")
-        ts.getcanvas().postscript(file="Conway_Stack.eps", colormode='color', pagewidth=900, pageheight=900, width=width_new * 2,
+        ts.getcanvas().postscript(file="ConwayStack.gif", colormode='color', pagewidth=900, pageheight=900, width=width_new * 2,
                                    height=900)
         wn.exitonclick()
 
