@@ -59,7 +59,7 @@ def ConwayGeneration(a):
 
             # Update str
             s = tmp
-
+        print i
         return s;
 
     import itertools

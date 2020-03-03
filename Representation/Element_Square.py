@@ -34,7 +34,7 @@ def getT(element_number):
      pixels.append(output)
 
     merged = list(itertools.chain(*pixels))
-    n = 30
+    n = 25
     final = [merged[i * n:(i + 1) * n] for i in range((len(merged) + n - 1) // n)]
     return final
 
@@ -43,6 +43,6 @@ numbers = getElements()
 
 for i in range(0, 20):
     array = getT(i)
-    Draw.Draw(array,1,5,1000,1000)
+    Draw.Draw(array,1,3,1000,1000,0,300)
 
 

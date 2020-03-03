@@ -6,7 +6,7 @@ import itertools
 conway = Conway_Reader.conway_array
 
 pixels = []
-length=  32
+length=  33
 box_size = 10
 
 for N in range(1,length):

@@ -37,7 +37,7 @@ for i in range(0,20):
     merged = list(itertools.chain(*conway_replace))
     n = 40
     final = [merged[i * n:(i + 1) * n] for i in range((len(merged) + n - 1) // n)]
-    Draw.Draw(final,1,5)
+    Draw.Draw(final,1,5,1000,1000,0,0)
 
 
 

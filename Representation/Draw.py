@@ -5,7 +5,7 @@ def Draw(pixels,n,size,length,width_new,x,y):
     t = 0
     import time
     count = 0
-    time.sleep(0.1)
+    time.sleep(1)
     import turtle
     wn = turtle.Screen()
     myPen = turtle.Turtle()
@@ -66,8 +66,8 @@ def Draw(pixels,n,size,length,width_new,x,y):
 
             t += (time.clock() - start_time)
 
-
-            progressBar(count,length,20)
+            if n == 0:
+                progressBar(count,length,20)
 
         myPen.setheading(270)
         myPen.penup()
@@ -81,7 +81,7 @@ def Draw(pixels,n,size,length,width_new,x,y):
     if n == 0:
         ts = turtle.getscreen()
         #ts.getcanvas().postscript(file="duck.eps")
-        ts.getcanvas().postscript(file="ConwayStack.gif", colormode='color', pagewidth=900, pageheight=900, width=width_new * 2,
+        ts.getcanvas().postscript(file="ConwayStack.eps", colormode='color', pagewidth=900, pageheight=900, width=width_new,
                                    height=900)
         wn.exitonclick()
 

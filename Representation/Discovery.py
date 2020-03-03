@@ -2,6 +2,7 @@ from Generation import Conway_Reader
 import Draw
 
 conway_array = Conway_Reader.conway_array
+tempRange = 15
 
 def getTest(i):
 
@@ -21,16 +22,16 @@ def getTest(i):
     return test
 
 
-for i in range(0, 20):
+for i in range(0, tempRange):
 
     conway_replace = []
 
-    for x in range(0, 20):
+    for x in range(0, tempRange):
         d = conway_array[x].replace(getTest(i), "4" * int(len(getTest(i))), conway_array[x].rfind(getTest(i)) + 1)
         conway_replace.append(list(map(int, str(d))))
 
 
-    Draw.Draw(conway_replace, 1, 5,1000,1000,0,0)
+    Draw.Draw(conway_replace, 10, 10,1000,1000,-600,0)
 
 
 

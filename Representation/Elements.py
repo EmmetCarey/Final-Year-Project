@@ -1,5 +1,7 @@
+from __future__ import division
 from Generation import Conway_Reader
 import Draw
+
 
 def getElements():
     f2 = open("/Users/emmetcarey/Documents/GitHub/Final-Year-Project/Text/Elements.txt", "r")
@@ -24,7 +26,7 @@ def getT(element_number):
         d = a.replace(b,"4" * int(len(b)),a.find(b) + 1)
         test.append(d)
 
-    for N in range(1,20):
+    for N in range(1,tempRange):
 
      input = [test[N]]
      output = list(map(int, str(input[0])))
@@ -33,11 +35,18 @@ def getT(element_number):
 
     return pixels
 
+
+
 conway_array = Conway_Reader.conway_array
 numbers = getElements()
 
-for i in range(0,20):
+tempRange = 20
+size = 1/tempRange *120
+print size
+
+
+for i in range(0,92):
     array = getT(i)
-    Draw.Draw(array,1,2,1000,1000,-600,300)
+    Draw.Draw(array,1,5,1000,1000,-600,0)
 
 
